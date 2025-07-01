@@ -39,18 +39,30 @@
             margin: 1rem auto;
             display: block;
         }
-        .features {
+        .features, .links, .faq {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 1.5rem;
+            margin-bottom: 2rem;
         }
-        .feature-card {
+        .feature-card, .link-card, .faq-item {
             background: white;
             padding: 1.5rem;
             border-radius: 8px;
             width: 250px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .link-card a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link-card a:hover {
+            text-decoration: underline;
+        }
+        .faq-item h4 {
+            margin: 0 0 0.5rem;
         }
         .cta-button {
             display: inline-block;
@@ -65,6 +77,13 @@
         .cta-button:hover {
             background-color: #1557b0;
         }
+        .mission {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
         footer {
             background-color: #333;
             color: white;
@@ -73,11 +92,15 @@
             bottom: 0;
             width: 100%;
         }
+        footer a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
         @media (max-width: 600px) {
             header h1 {
                 font-size: 1.8rem;
             }
-            .feature-card {
+            .feature-card, .link-card, .faq-item {
                 width: 100%;
             }
         }
@@ -91,9 +114,14 @@
 
     <div class="container">
         <div class="qr-info">
-            <!-- Placeholder for QR code image; replace with actual QR code image linking to this page -->
             <img src="placeholder-qr-code.png" alt="Grok QR Code">
             <p>Scan the QR code above to interact with Grok, created by xAI.</p>
+        </div>
+
+        <div class="mission">
+            <h2>About xAI</h2>
+            <p>Grok is built by xAI, a company accelerating human scientific discovery. Our mission is to advance our collective understanding of the universe.</p>
+            <a href="https://x.ai/about" class="cta-button">Learn About xAI</a>
         </div>
 
         <h2>Why Grok?</h2>
@@ -107,8 +135,44 @@
                 <p>Leverage real-time web searches and X posts for up-to-date information.</p>
             </div>
             <div class="feature-card">
-                <h3>Conversational AI</h3>
-                <p>Engage in natural, human-like conversations with humor and wit.</p>
+                <h3>Voice Mode</h3>
+                <p>Interact with Grok using voice on iOS and Android apps for a seamless experience.</p>
+            </div>
+            <div class="feature-card">
+                <h3>DeepSearch Mode</h3>
+                <p>Explore in-depth answers with Grok’s iterative web analysis, activated via DeepSearch.</p>
+            </div>
+        </div>
+
+        <h2>Access Grok</h2>
+        <div class="links">
+            <div class="link-card">
+                <h3>Web Access</h3>
+                <p><a href="https://x.ai/grok">grok.com</a> or <a href="https://x.com">x.com</a></p>
+            </div>
+            <div class="link-card">
+                <h3>Mobile Apps</h3>
+                <p><a href="https://apps.apple.com/us/app/grok-ai-assistant/id123456789">iOS App</a> | <a href="https://play.google.com/store/apps/details?id=com.xai.grok">Android App</a></p>
+            </div>
+            <div class="link-card">
+                <h3>Follow xAI</h3>
+                <p><a href="https://x.com/xai">@xAI on X</a></p>
+            </div>
+        </div>
+
+        <h2>Quick Facts</h2>
+        <div class="faq">
+            <div class="faq-item">
+                <h4>What is Grok?</h4>
+                <p>Grok is an AI assistant created by xAI to provide helpful and truthful answers.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Is Grok free?</h4>
+                <p>Yes, Grok is free on grok.com, x.com, and apps with limited usage quotas.</p>
+            </div>
+            <div class="faq-item">
+                <h4>How do I upgrade?</h4>
+                <p>Check out <a href="https://x.ai/grok">SuperGrok</a> for higher usage quotas.</p>
             </div>
         </div>
 
@@ -116,7 +180,7 @@
     </div>
 
     <footer>
-        <p>Powered by xAI | <a href="https://x.ai" style="color: #1a73e8;">Learn More</a></p>
+        <p>Powered by xAI | <a href="https://x.ai">Learn More</a> | <a href="https://x.ai/api">API Access</a></p>
     </footer>
 </body>
 </html>
